@@ -25,7 +25,7 @@ The code follows Domain-Driven Design and lives in the src folder. The domain fo
 You need Docker installed. Run these commands:
 
 ```
-git clone <your-repo-url>
+git clone https://github.com/kareemibrahim99/Event_Driven_Microservice.git
 cd activity-service
 cp .env.example .env
 docker compose up --build
