@@ -49,7 +49,7 @@ To read the saved logs, send a GET request to /api/activities. You can filter wi
 curl "localhost:3000/api/activities?userId=u1&page=1&limit=5"
 ```
 
-The same requests work against the live demo address by replacing localhost:3000 with https://carries-minutes-general-exotic.trycloudflare.com.
+The same requests work against the live demo address by replacing localhost:3000 with https://floor-finds-responsibilities-completing.trycloudflare.com.
 
 ## How to run on Kubernetes
 
