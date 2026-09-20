@@ -8,7 +8,7 @@ The service runs on a Kubernetes cluster (minikube) and is exposed publicly thro
 
 https://floor-finds-responsibilities-completing.trycloudflare.com
 
-You can try https://carries-minutes-general-exotic.trycloudflare.com/api/health to check the service and https://carries-minutes-general-exotic.trycloudflare.com/api/activities to read the saved logs.
+You can try https://floor-finds-responsibilities-completing.trycloudflare.com/api/health to check the service and https://floor-finds-responsibilities-completing.trycloudflare.com/api/activities to read the saved logs.
 
 This link is temporary. It only works while my tunnel is running. If it is offline when you read this, please watch the demo video or run the project locally using the steps below.
 
