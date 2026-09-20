@@ -6,7 +6,7 @@ This is an event-driven microservice built with Node.js, Express, Kafka, and Mon
 
 The service runs on a Kubernetes cluster (minikube) and is exposed publicly through a Cloudflare tunnel at this address:
 
-https://carries-minutes-general-exotic.trycloudflare.com
+https://floor-finds-responsibilities-completing.trycloudflare.com
 
 You can try https://carries-minutes-general-exotic.trycloudflare.com/api/health to check the service and https://carries-minutes-general-exotic.trycloudflare.com/api/activities to read the saved logs.
 
