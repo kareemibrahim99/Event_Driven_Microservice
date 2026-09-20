@@ -2,6 +2,15 @@
 
 This is an event-driven microservice built with Node.js, Express, Kafka, and MongoDB. It receives user activity logs, sends them through Kafka, stores them in MongoDB, and lets you read them through a REST API with pagination and filtering.
 
+## Live demo
+
+The service runs on a Kubernetes cluster (minikube) and is exposed publicly through a Cloudflare tunnel at this address:
+
+https://carries-minutes-general-exotic.trycloudflare.com
+
+You can try https://carries-minutes-general-exotic.trycloudflare.com/api/health to check the service and https://carries-minutes-general-exotic.trycloudflare.com/api/activities to read the saved logs.
+
+This link is temporary. It only works while my tunnel is running. If it is offline when you read this, please watch the demo video or run the project locally using the steps below.
 
 ## How it works
 
@@ -40,6 +49,8 @@ To read the saved logs, send a GET request to /api/activities. You can filter wi
 curl "localhost:3000/api/activities?userId=u1&page=1&limit=5"
 ```
 
+The same requests work against the live demo address by replacing localhost:3000 with https://carries-minutes-general-exotic.trycloudflare.com.
+
 ## How to run on Kubernetes
 
 These commands start a local minikube cluster, build the image inside it, deploy everything, and forward the service to port 8080:
@@ -53,7 +64,11 @@ kubectl get pods -n activity
 kubectl port-forward -n activity svc/activity-service 8080:3000
 ```
 
-Wait until all pods show 1/1 Running before testing. For the demo, the service was made public with a temporary Cloudflare tunnel using the command cloudflared tunnel --url http://localhost:8080.
+Wait until all pods show 1/1 Running before testing. To make the service public for a demo, I used a temporary Cloudflare tunnel with this command:
+
+```
+cloudflared tunnel --url http://localhost:8080
+```
 
 ## Architecture choices
 
